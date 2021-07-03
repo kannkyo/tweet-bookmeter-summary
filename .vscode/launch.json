@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "tweet_bookmeter_summary:secret.get_secret (python3.7)",
+      "invokeTarget": {
+        "target": "code",
+        "projectRoot": "${workspaceFolder}/src/tweet_bookmeter_summary",
+        "lambdaHandler": "secret.get_secret"
+      },
+      "lambda": {
+        "runtime": "python3.7",
+        "payload": {},
+        "environmentVariables": {}
+      }
+    }
+  ]
+}

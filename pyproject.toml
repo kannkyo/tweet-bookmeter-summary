@@ -1,0 +1,19 @@
+[tool.poetry]
+authors = ["kannkyo <15080890+kannkyo@users.noreply.github.com>"]
+description = ""
+name = "tweet_bookmeter_summary"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+boto3 = "^1.17.105"
+python = "^3.7"
+requests-oauthlib = "1.3.0"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.5.7"
+pytest = "^5.2"
+selenium = "^3.141.0"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
