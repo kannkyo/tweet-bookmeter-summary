@@ -9,7 +9,7 @@ poetry export -f requirements.txt --output src/$MODULE_NAME/requirements.txt
 
 pushd src/$MODULE_NAME
     poetry run pip install -r requirements.txt -t .
-    zip -rq ../lambda.zip .
+    zip -rq ../../lambda.zip .
 popd
 
-# aws lambda update-function-code --function-name $FUNCTION_NAME --zip-file fileb://lambda.zip
+aws lambda update-function-code --function-name $FUNCTION_NAME --zip-file fileb://lambda.zip
