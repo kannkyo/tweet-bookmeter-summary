@@ -78,6 +78,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "chromedriver-py"
+version = "91.0.4472.19"
+description = "chromedriver binaries for all platforms"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
@@ -340,7 +348,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "348c1901e68360cd9745365810efdddb8f7ae4bf7a8fbfbfaa44533f3e6abf38"
+content-hash = "df1aa782cc4b5025d976aab6ffccf5702eb337079a3cc0e5eee6310b4b05a751"
 
 [metadata.files]
 atomicwrites = [
@@ -370,6 +378,10 @@ certifi = [
 chardet = [
     {file = "chardet-4.0.0-py2.py3-none-any.whl", hash = "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"},
     {file = "chardet-4.0.0.tar.gz", hash = "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"},
+]
+chromedriver-py = [
+    {file = "chromedriver-py-91.0.4472.19.tar.gz", hash = "sha256:633d9a77b43d2e5b8328dcae53b874b496a3fe5951d02ab5c1257aae46fc1783"},
+    {file = "chromedriver_py-91.0.4472.19-py3-none-any.whl", hash = "sha256:1950cef84782b1ad9e2f082e1da0dd8c3308332e628c2672a797802430aa06c4"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},

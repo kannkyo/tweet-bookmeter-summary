@@ -54,6 +54,12 @@ def tweet_summary(driver: webdriver, user_info: dict):
     bookmeter_summary_page.tweet_summary(driver=driver)
 
 
+def chrome_driver_on_pc():
+    from chromedriver_py import binary_path
+    driver = webdriver.Chrome(executable_path=binary_path)
+    return driver
+
+
 def chrome_driver():
     options = Options()
     options.binary_location = "/opt/python/bin/headless-chromium"
@@ -75,11 +81,12 @@ def lambda_handler(event, context):
     try:
         region_name = "ap-northeast-1"
 
-        secret_bookmeter = secret.get_secret(
-            region_name=region_name,
-            secret_name=os.environ.get('BOOKMETER_SECRET_NAME'))
+        secret_bookmeter = {
+            "name": "",
+            "id": "",
+            "password": ""}
 
-        driver = chrome_driver()
+        driver = chrome_driver_on_pc()
 
         tweet_summary(driver=driver, user_info=secret_bookmeter)
 
@@ -96,3 +103,6 @@ def lambda_handler(event, context):
     except Exception as e:
         logger.error(traceback.format_exc())
         raise e
+
+
+lambda_handler(None, None)
