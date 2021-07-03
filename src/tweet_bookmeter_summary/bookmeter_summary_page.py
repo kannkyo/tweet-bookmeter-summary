@@ -14,5 +14,5 @@ def tweet_summary(driver: webdriver):
     summary_button.click()
 
     tweet_modal_window: WebElement = driver.find_element_by_xpath(
-        '//*[@class="modal__window"]')
+        '//*[@class="controller__button"]')
     tweet_modal_window.submit()
