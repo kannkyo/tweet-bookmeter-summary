@@ -5,7 +5,9 @@ from selenium.webdriver.remote.webelement import WebElement
 
 def open_bookmeter_summary(driver: webdriver, user_id: str, order: str = "desc", insert_break: bool = True, image_size: str = "medium"):
     driver.get(
-        f"https://bookmeter.com/users/{user_id}/summary/yearly/posting/bookmeter")
+        f"https://bookmeter.com/users/{user_id}/summary/monthly/posting")
+    # driver.get(
+    #     f"https://bookmeter.com/users/{user_id}/summary/yearly/posting/bookmeter")
 
 
 def tweet_summary(driver: webdriver):

@@ -44,12 +44,13 @@ def tweet_summary(driver: webdriver, user_info: dict):
     # Login
     bookmeter_login_page.login(
         driver=driver,
-        username=user_info['name'],
-        password=user_info['password'])
+        username=user_info[os.environ.get('USER_NAME')],
+        password=user_info[os.environ.get('USER_PASSWORD')])
 
     # Open Summary Page
     bookmeter_summary_page.open_bookmeter_summary(
-        driver=driver, user_id=user_info['id'])
+        driver=driver,
+        user_id=user_info[os.environ.get('USER_ID')])
 
     bookmeter_summary_page.tweet_summary(driver=driver)
 
@@ -81,7 +82,9 @@ def lambda_handler(event, context):
 
         driver = chrome_driver()
 
-        tweet_summary(driver=driver, user_info=secret_bookmeter)
+        tweet_summary(
+            driver=driver,
+            user_info=secret_bookmeter)
 
         # Wait
         time.sleep(1)
